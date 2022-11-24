@@ -120,10 +120,10 @@
 ##13. Поместите туда тестовый файл, например wget https://mirror.yandex.ru/ubuntu/ls-lR.gz -O /tmp/new/test.gz.  
 ![Рис.13](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/13.png )  
 
-##14. Прикрепите вывод lsblk.
+##14. Прикрепите вывод lsblk.  
 ![Рис.14](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/14.png )  
 
-##15.Протестируйте целостность файла:
+##15.Протестируйте целостность файла:  
 ![Рис.15](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/15.png )  
 
 >root@vagrant:~# gzip -t /tmp/new/test.gz  
