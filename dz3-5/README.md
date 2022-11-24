@@ -11,35 +11,35 @@
 >Сделайте vagrant destroy на имеющийся инстанс Ubuntu. Замените содержимое Vagrantfile следующим:  
 Решение:
 >Сделал с версией Ubuntu 22.04
->>path_to_disk_folder = './disks'
->>
->>host_params = {
->>    'disk_size' => 2560,
->>    'disks'=>[1, 2],
->>    'cpus'=>2,
->>    'memory'=>2048,
->>    'hostname'=>'sysadm-fs',
->>    'vm_name'=>'sysadm-fs'
->>}
->>Vagrant.configure("2") do |config|
->>    config.vm.box = "bento/ubuntu-22.04"
->>    config.vm.hostname=host_params['hostname']
->>    config.vm.provider :virtualbox do |v|
->>
->>        v.name=host_params['vm_name']
->>        v.cpus=host_params['cpus']
->>        v.memory=host_params['memory']
->>
->>        host_params['disks'].each do |disk|
->>            file_to_disk=path_to_disk_folder+'/disk'+disk.to_s+'.vdi'
->>            unless File.exist?(file_to_disk)
->>                v.customize ['createmedium', '--filename', file_to_disk, '--size', host_params['disk_size']]
->>            end
->>            v.customize ['storageattach', :id, '--storagectl', 'SATA Controller', '--port', disk.to_s, '--device', 0, '--type', 'hdd', '--medium', file_to_disk]
->>        end
->>    end
->>    config.vm.network "private_network", type: "dhcp"
->>end
+     path_to_disk_folder = './disks'
+    
+     host_params = {
+     'disk_size' => 2560,
+     'disks'=>[1, 2],
+     'cpus'=>2,
+     'memory'=>2048,
+     'hostname'=>'sysadm-fs',
+     'vm_name'=>'sysadm-fs'
+     }
+     Vagrant.configure("2") do |config|
+     config.vm.box = "bento/ubuntu-22.04"
+     config.vm.hostname=host_params['hostname']
+     config.vm.provider :virtualbox do |v|
+
+         v.name=host_params['vm_name']
+         v.cpus=host_params['cpus']
+         v.memory=host_params['memory']
+ 
+         host_params['disks'].each do |disk|
+             file_to_disk=path_to_disk_folder+'/disk'+disk.to_s+'.vdi'
+             unless File.exist?(file_to_disk)
+                 v.customize ['createmedium', '--filename', file_to_disk, '--size', host_params['disk_size']]
+             end
+             v.customize ['storageattach', :id, '--storagectl', 'SATA Controller', '--port', disk.to_s, '--device', 0, '--type', 'hdd', '--medium', file_to_disk]
+         end
+     end
+     config.vm.network "private_network", type: "dhcp"
+    end
 Решение:  
 ![Рис.3-1](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/3-1.png )  
 ![Рис.3-2](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/3-2.png )  
@@ -126,9 +126,9 @@
 ##15.Протестируйте целостность файла:  
 ![Рис.15](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/15.png )  
 
->root@vagrant:~# gzip -t /tmp/new/test.gz  
->root@vagrant:~# echo $?  
->0  
+    root@vagrant:~# gzip -t /tmp/new/test.gz  
+    root@vagrant:~# echo $?  
+    0  
 ##16. Используя pvmove, переместите содержимое PV с RAID0 на RAID1.  
 ![Рис.16](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/16.png )  
 
@@ -141,8 +141,8 @@
 ##19. Протестируйте целостность файла, несмотря на "сбойный" диск он должен продолжать быть доступен:  
 ![Рис.19](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/19.png )  
 
->root@vagrant:~# gzip -t /tmp/new/test.gz  
->root@vagrant:~# echo $?  
->0  
+    root@vagrant:~# gzip -t /tmp/new/test.gz  
+    root@vagrant:~# echo $?  
+    0  
 ##20. Погасите тестовый хост, vagrant destroy.  
 ![Рис.20](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/20.png )  
