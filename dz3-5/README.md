@@ -1,12 +1,12 @@
-##Домашнее задание к занятию "3.5. Файловые системы"##
+## Домашнее задание к занятию "3.5. Файловые системы"
 >Убедитесь, что у вас на новой виртуальной машине (шаг 3 задания) установлены следующие утилиты  
 > - mdadm, fdisk, sfdisk, mkfs, lsblk, wget.  
 >Воспользуйтесь пакетным менеджером apt для установки необходимых инструментов  
-##Задание  
-##1. Узнайте о sparse (разряженных) файлах.  
+## Задание  
+## 1. Узнайте о sparse (разряженных) файлах.  
 Ответ: Изучил
 
-##2. Могут ли файлы, являющиеся жесткой ссылкой на один объект, иметь разные права доступа и владельца? Почему?  
+## 2. Могут ли файлы, являющиеся жесткой ссылкой на один объект, иметь разные права доступа и владельца? Почему?  
 
 >Сделайте vagrant destroy на имеющийся инстанс Ubuntu. Замените содержимое Vagrantfile следующим:  
 Решение:
@@ -47,17 +47,17 @@
 
 >Данная конфигурация создаст новую виртуальную машину с двумя дополнительными неразмеченными дисками по 2.5 Гб.
 
-##4. Используя fdisk, разбейте первый диск на 2 раздела: 2 Гб, оставшееся пространство.  
+## 4. Используя fdisk, разбейте первый диск на 2 раздела: 2 Гб, оставшееся пространство.  
 Решение:  
 ![Рис.4-1](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/4-1.png )  
 ![Рис.4-2](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/4-2.png )  
 
-##5. Используя sfdisk, перенесите данную таблицу разделов на второй диск.  
+## 5. Используя sfdisk, перенесите данную таблицу разделов на второй диск.  
 Решение:  
 ![Рис.5-1](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/5-1.png )  
 ![Рис.5-2](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/5-2.png )  
 
-##6. Соберите mdadm RAID1 на паре разделов 2 Гб.  
+## 6. Соберите mdadm RAID1 на паре разделов 2 Гб.  
 Решение:  
 >Подготовим диски  
 
@@ -96,53 +96,53 @@
 >Мы увидим:  
 ![Рис.6](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/6.png )  
   
-##7. Соберите mdadm RAID0 на второй паре маленьких разделов.  
+## 7. Соберите mdadm RAID0 на второй паре маленьких разделов.  
 Решение:  
 ![Рис.7](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/7.png )  
 
-##8. Создайте 2 независимых PV на получившихся md-устройствах.  
+## 8. Создайте 2 независимых PV на получившихся md-устройствах.  
 Решение:  
 ![Рис.8](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/8.png )  
 
-##9. Создайте общую volume-group на этих двух PV.  
+## 9. Создайте общую volume-group на этих двух PV.  
 ![Рис.9](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/9.png )  
 
-##10. Создайте LV размером 100 Мб, указав его расположение на PV с RAID0.
+## 10. Создайте LV размером 100 Мб, указав его расположение на PV с RAID0.
 ![Рис.10](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/10.png )  
 
-##11. Создайте mkfs.ext4 ФС на получившемся LV.  
+## 11. Создайте mkfs.ext4 ФС на получившемся LV.  
 ![Рис.11](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/11.png )  
 
-##12. Смонтируйте этот раздел в любую директорию, например, /tmp/new.  
+## 12. Смонтируйте этот раздел в любую директорию, например, /tmp/new.  
 ![Рис.12-1](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/12-1.png )  
 ![Рис.12-2](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/12-2.png )  
 
-##13. Поместите туда тестовый файл, например wget https://mirror.yandex.ru/ubuntu/ls-lR.gz -O /tmp/new/test.gz.  
+## 13. Поместите туда тестовый файл, например wget https://mirror.yandex.ru/ubuntu/ls-lR.gz -O /tmp/new/test.gz.  
 ![Рис.13](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/13.png )  
 
-##14. Прикрепите вывод lsblk.  
+## 14. Прикрепите вывод lsblk.  
 ![Рис.14](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/14.png )  
 
-##15.Протестируйте целостность файла:  
+## 15.Протестируйте целостность файла:  
 ![Рис.15](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/15.png )  
 
     root@vagrant:~# gzip -t /tmp/new/test.gz  
     root@vagrant:~# echo $?  
     0  
-##16. Используя pvmove, переместите содержимое PV с RAID0 на RAID1.  
+## 16. Используя pvmove, переместите содержимое PV с RAID0 на RAID1.  
 ![Рис.16](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/16.png )  
 
-##17. Сделайте --fail на устройство в вашем RAID1 md.  
+## 17. Сделайте --fail на устройство в вашем RAID1 md.  
 ![Рис.17](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/17.png )  
 
-##18. Подтвердите выводом dmesg, что RAID1 работает в деградированном состоянии.  
+## 18. Подтвердите выводом dmesg, что RAID1 работает в деградированном состоянии.  
 ![Рис.18](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/18.png )  
 
-##19. Протестируйте целостность файла, несмотря на "сбойный" диск он должен продолжать быть доступен:  
+## 19. Протестируйте целостность файла, несмотря на "сбойный" диск он должен продолжать быть доступен:  
 ![Рис.19](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/19.png )  
 
     root@vagrant:~# gzip -t /tmp/new/test.gz  
     root@vagrant:~# echo $?  
     0  
-##20. Погасите тестовый хост, vagrant destroy.  
+## 20. Погасите тестовый хост, vagrant destroy.  
 ![Рис.20](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/20.png )  
