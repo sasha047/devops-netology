@@ -161,5 +161,33 @@ Hwmon_temp: Также бы я добавил температуру
 ## которое можно создать в сессии?
 
 Ответ:  
->Запустил в Vagrant, смотрим нагрузку на ВМ  
-![Рис.7](https://github.com/sasha047/devops-netology/blob/main/dz3-4/img/7.png)  
+>Запустил в Vagrant, смотрим нагрузку на ВМ Ubuntu 22.04  
+![Рис.7-1](https://github.com/sasha047/devops-netology/blob/main/dz3-4/img/7-1.png)  
+
+>Посмотрим загрузку VM  
+![Рис.7-2](https://github.com/sasha047/devops-netology/blob/main/dz3-4/img/7-2.png)  
+
+![Рис.7-3](https://github.com/sasha047/devops-netology/blob/main/dz3-4/img/7-3.png)  
+
+>В итоге эта бесконечная процедура затянулась на несколько часов.   
+>Но при этом я мог зайти второй сессией на нее.  
+>После того как операция завершилась- зайти уже не смог. Машина не работала.  
+  
+>Собрал VM на Ubuntu 22.04  
+![Рис.7-4](https://github.com/sasha047/devops-netology/blob/main/dz3-4/img/7-4.png)  
+
+>Процесс прошел буквально меньше, чем за минуту. Запустид dmesg.  
+>Смотрим, что процесс завершился с помощью fork rejecked.  
+![Рис.7-5](https://github.com/sasha047/devops-netology/blob/main/dz3-4/img/7-5.png)  
+
+>После превышения параметров распрделения и ограничения ресурсов,   
+>произошел выход из-за цикливания.  
+
+![Рис.7-6](https://github.com/sasha047/devops-netology/blob/main/dz3-4/img/7-6.png)  
+
+>Выставил ограничения на число создаваемых  процессов на пользователя равное 50.  
+
+![Рис.7-7](https://github.com/sasha047/devops-netology/blob/main/dz3-4/img/7-7.png)  
+
+>Потом также запустил :(){ :|:& };:  
+
