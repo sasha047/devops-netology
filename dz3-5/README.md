@@ -35,7 +35,7 @@
 >Сменим права на файл на 0777  
 >Снова проверяем кмандой stat.  
 >Видим, что права изменились  
-![Рис.3-1](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/3-1.png )  
+![Рис.2](https://github.com/sasha047/devops-netology/blob/main/dz3-5/img/2.png )  
 
 ## 3.Сделайте vagrant destroy на имеющийся инстанс Ubuntu. Замените содержимое Vagrantfile следующим:  
 Решение:  
