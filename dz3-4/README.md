@@ -150,7 +150,7 @@ Hwmon_temp: Также бы я добавил температуру
 >nsenter- Запускает новую команду в пространстве имён уже запущенного процесса.   
 >Особенно полезно для работы с образами Docker.  
 
-![Рис.6](https://github.com/sasha047/devops-netology/blob/main/dz3-4/img/6.png)  
+![Рис.6new](https://github.com/sasha047/devops-netology/blob/main/dz3-4/img/6new.png)  
 
 ## 7. Найдите информацию о том, что такое :(){ :|:& };:. 
 ## Запустите эту команду в своей виртуальной машине Vagrant с Ubuntu 22.04 
