@@ -30,7 +30,20 @@
 
 >Пришлоось немного помучится. обычно проблем особых не возникало со службами. 
 >тут не в какую не хотел запускаться и пути менял и конфигурацию.
- 
+-----------------------------------------------------------------------------------
+Предлагаю уточнить как именно в службу будут передаваться дополнительные опции. Примеры можно посмотреть вот здесь:  
+https://www.freedesktop.org/software/systemd/man/systemd.service.html#ExecStart=  
+https://unix.stackexchange.com/questions/323914/dynamic-variables-in-systemd-service-unit-files  
+https://stackoverflow.com/questions/48843949/systemd-use-variables-in-a-unit-file  
+Замечу, что речь идёт не о переменных окружения, а об опциях (параметрах) запуска службы.  
+  
+>> Дополнительные опции мы можем добавить сюда: /etc/default/node_exporter  
+ Указав в unit строку: ExecStart=/opt/node_exporter/node_exporter $OPTIONS  
+![1-options1](https://github.com/sasha047/devops-netology/blob/main/dz3-4/img/1-options1.png)    
+
+>> Либо, можно указать так
+![2-options2](https://github.com/sasha047/devops-netology/blob/main/dz3-4/img/2-options2.png)  
+
 ## 2. Ознакомьтесь с опциями node_exporter и выводом /metrics по-умолчанию. 
 ## Приведите несколько опций, которые вы бы выбрали для базового мониторинга хоста по CPU, 
 ## памяти, диску и сети.
