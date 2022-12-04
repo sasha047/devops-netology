@@ -149,6 +149,7 @@ Hwmon_temp: Также бы я добавил температуру
 Решение:  
 >nsenter- Запускает новую команду в пространстве имён уже запущенного процесса.   
 >Особенно полезно для работы с образами Docker.  
+>дополнительно почитал в man и man в инете https://man7.org/linux/man-pages/man1/unshare.1.html
 
 ![Рис.6new](https://github.com/sasha047/devops-netology/blob/main/dz3-4/img/6new.png)  
 
