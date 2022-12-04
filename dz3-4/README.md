@@ -42,7 +42,7 @@ https://stackoverflow.com/questions/48843949/systemd-use-variables-in-a-unit-fil
 ![1-options1](https://github.com/sasha047/devops-netology/blob/main/dz3-4/img/1-options1.png)    
 
 >> Либо, можно указать так
-![2-options2](https://github.com/sasha047/devops-netology/blob/main/dz3-4/img/2-options2.png)  
+![1-options2](https://github.com/sasha047/devops-netology/blob/main/dz3-4/img/1-options2.png)  
 
 ## 2. Ознакомьтесь с опциями node_exporter и выводом /metrics по-умолчанию. 
 ## Приведите несколько опций, которые вы бы выбрали для базового мониторинга хоста по CPU, 
