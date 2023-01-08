@@ -30,7 +30,7 @@ show bgp x.x.x.x/32
 >Использовал две разные кманды  
 >netstat -ntlp | grep LISTEN  из пакета net-tools  
 >ss -tnlp  
-1[Рис.3](https://github.com/sasha047/devops-netology/blob/main/dz3-8/img/3.png)  
+![Рис.3](https://github.com/sasha047/devops-netology/blob/main/dz3-8/img/3.png)  
 
 Ответ:  
 >80, 8008 - Apache  
