@@ -95,5 +95,7 @@
 ![Рис. nmap](https://github.com/sasha047/devops-netology/blob/main/dz3-9/img/nmap.png)  
 
 #### 2* Установите и настройте фаервол ufw на web-сервер из задания 3. Откройте доступ снаружи только к портам 22,80,443  
+Ответ:  
+>Открытые порты на моем сервере, включая те, которые указаны в задании.  
 ![Рис. ufw](https://github.com/sasha047/devops-netology/blob/main/dz3-9/img/ufw.png)  
 
