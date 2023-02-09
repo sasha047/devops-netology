@@ -18,7 +18,8 @@
 
 Ответ:  
 >При строковом значении переменной:  
-	c = str(a) + b
+	c = str(a)  
+	
 >При челочисленном значениии переменной:  
 	c = (a + int(b)) * int(b) * int(b)  
 ![Рис.1-2](https://github.com/sasha047/devops-netology/blob/main/dz4-2/img/1-2.png)  
