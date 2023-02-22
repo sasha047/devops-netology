@@ -19,7 +19,7 @@ e=$(($a+$b))
 | `d`  | вернет 1+2  | обращение к переменным |
 | `e`  | вернет 3  | конструкция ((..)) служит для арифметических операций |
 
-Решение:
+Решение:  
 ![Рис.1-1](https://github.com/sasha047/devops-netology/blob/main/dz4-1/img/1-1.png)  
 ![Рис.1-2](https://github.com/sasha047/devops-netology/blob/main/dz4-1/img/1-2.png)  
 ![Рис.1-3](https://github.com/sasha047/devops-netology/blob/main/dz4-1/img/1-3.png)  
