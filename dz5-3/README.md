@@ -22,6 +22,10 @@ Hey, Netology
 ```
 Решение:  
 ![Рис.1-1](https://github.com/sasha047/devops-netology/blob/main/dz5-3/img/1-1.png)  
+![Рис.1-2](https://github.com/sasha047/devops-netology/blob/main/dz5-3/img/1-2.png)
+![Рис.1-3](https://github.com/sasha047/devops-netology/blob/main/dz5-3/img/1-3.png)
+![Рис.1-4](https://github.com/sasha047/devops-netology/blob/main/dz5-3/img/1-4.png)
+![Рис.1-5](https://github.com/sasha047/devops-netology/blob/main/dz5-3/img/1-5.png)
 
 Опубликуйте созданный форк в своем репозитории и предоставьте ответ в виде ссылки на https://hub.docker.com/username_repo.
 
@@ -65,17 +69,20 @@ Hey, Netology
 - Добавьте еще один файл в папку ```/data``` на хостовой машине;
 - Подключитесь во второй контейнер и отобразите листинг и содержание файлов в ```/data``` контейнера.
 
+![Рис.3-1](https://github.com/sasha047/devops-netology/blob/main/dz5-3/img/3-1.png)
+![Рис.3-2](https://github.com/sasha047/devops-netology/blob/main/dz5-3/img/3-2.png)
+
 ## Задача 4 (*)
 
 Воспроизвести практическую часть лекции самостоятельно.
 
 Соберите Docker образ с Ansible, загрузите на Docker Hub и пришлите ссылку вместе с остальными ответами к задачам.
 
+![Рис.4-1](https://github.com/sasha047/devops-netology/blob/main/dz5-3/img/4-1.png)
+![Рис.4-2](https://github.com/sasha047/devops-netology/blob/main/dz5-3/img/4-2.png)
+![Рис.4-3](https://github.com/sasha047/devops-netology/blob/main/dz5-3/img/4-3.png)
 
----
-
-### Как cдавать задание
-
-Выполненное домашнее задание пришлите ссылкой на .md-файл в вашем репозитории.
-
+Также были изучены команды по удалению всех докеров и образов:
+docker rm -vf $(docker ps -aq)
+docker rmi -f $(docker images -aq)
 ---
