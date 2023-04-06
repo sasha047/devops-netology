@@ -21,9 +21,25 @@ Hey, Netology
 </html>
 ```
 Решение:  
+
+Создал репозиторий:  
 ![Рис.1-1](https://github.com/sasha047/devops-netology/blob/main/dz5-3/img/1-1.png)  
 
-Опубликуйте созданный форк в своем репозитории и предоставьте ответ в виде ссылки на https://hub.docker.com/username_repo.
+Скачал образ Nginx  
+![Рис.1-2](https://github.com/sasha047/devops-netology/blob/main/dz5-3/img/1-2.png)  
+
+Создал дирректорию и в ней Dockerdile и файл dockerfile.txt с содержащий HTML-код, который передается в файл Index.html  
+![Рис.1-3](https://github.com/sasha047/devops-netology/blob/main/dz5-3/img/1-3.png)  
+
+Авторизовался для отправки образа в репозиторий  
+Создал Fork образа  
+Запушил образ в свой репозиторий  
+![Рис.1-4](https://github.com/sasha047/devops-netology/blob/main/dz5-3/img/1-4.png)  
+
+Запустил свой образ и видим результат (правда что-то с кодировкой)  
+![Рис.1-5](https://github.com/sasha047/devops-netology/blob/main/dz5-3/img/1-5.png)  
+
+Ссылки на форк https://hub.docker.com/r/sasha047/devops-netology/tags.  
 
 ## Задача 2
 
@@ -64,6 +80,17 @@ Hey, Netology
 - Подключитесь к первому контейнеру с помощью ```docker exec``` и создайте текстовый файл любого содержания в ```/data```;
 - Добавьте еще один файл в папку ```/data``` на хостовой машине;
 - Подключитесь во второй контейнер и отобразите листинг и содержание файлов в ```/data``` контейнера.
+
+Решение:  
+
+Запустил оба контейнера с подключенной папкой data  
+![Рис.3-1](https://github.com/sasha047/devops-netology/blob/main/dz5-3/img/3-1.png)  
+
+Подключился к первому контейнеру и создал файл README.md  
+На хостовой машине создал файл new_file.txt и поместил в папку data  
+Поключился ко второму контейнеру и в папке data видим оба файла  
+![Рис.3-2](https://github.com/sasha047/devops-netology/blob/main/dz5-3/img/3-2.png)  
+
 
 ## Задача 4 (*)
 
