@@ -1,0 +1,8 @@
+*/terraform/
+*/src/
+*/img/
+
+*.tfstate *.tfvars *.tfvars.json *_override.tf *_override.tf.json .tfstate.
+
+
+crash.log override.tf terraform.rc .terraformrc
