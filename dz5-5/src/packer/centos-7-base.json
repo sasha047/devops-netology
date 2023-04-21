@@ -1,0 +1,42 @@
+{
+   "variables": {
+       "folder_id": "",
+       "subnet_id": "",
+       "token": "",
+       "zone": "",
+       "image_family": "",
+       "image_name": "",
+       "source_image_family": "",
+       "ssh_username": "",
+       "ssh_private_key_file": "",
+       "image_description": ""
+  },
+
+  "builders": [
+    {
+      "disk_type": "network-nvme",
+      "folder_id": "{{user `folder_id`}}",
+      "image_description": "{{user `image_description`}}",
+      "image_family": "{{user `image_family`}}",
+      "image_name": "{{user `image_name`}}",
+      "source_image_family": "{{user `source_image_family`}}",
+      "ssh_username": "{{user `ssh_username`}}",
+      "ssh_private_key_file": "{{user `ssh_private_key_file`}}",
+      "subnet_id": "{{user `subnet_id`}}",
+      "token": "{{user `token`}}",
+      "type": "yandex",
+      "use_ipv4_nat": true,
+      "zone": "{{user `zone`}}"
+    }
+  ],
+
+  "provisioners": [
+    {
+      "inline": [
+        "sudo yum -y update",
+        "sudo yum -y install bridge-utils bind-utils iptables curl net-tools tcpdump rsync telnet openssh-server"
+      ],
+      "type": "shell"
+    }
+  ]
+}
